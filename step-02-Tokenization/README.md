@@ -39,6 +39,17 @@ Example:
 
 ---
 
-## Sample Code (Scratch)
+## Sample Code in tokenizer_scratch.py 
+
+## 📊 Sample Output (Scratch Tokenizer)
+
+### Input:
+This is my first LLM project
+
+### Encoded:
+[12, 45, 67, 23, ...]
+
+### Decoded:
+this is my first llm project
 
 ```python
