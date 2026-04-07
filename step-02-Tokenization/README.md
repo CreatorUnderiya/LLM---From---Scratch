@@ -52,7 +52,7 @@ This is my first LLM project
 ### Decoded:
 this is my first llm project
 
-## Tokenization using tiktoken
+## Approach 2: Tokenization using tiktoken 
 
 Used OpenAI's tiktoken library for fast and efficient tokenization.
 
