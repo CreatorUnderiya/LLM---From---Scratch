@@ -69,3 +69,39 @@ class GPTDataset(Dataset):
         return self.input_ids[idx], self.target_ids[idx]
 
 
+## Model Configuration (GPT Style)
+
+We define a configuration similar to GPT architecture:
+
+```python
+GPT_CONFIG_124M = {
+    "vocab_size": 50257,
+    "context_length": 256,
+    "emb_dim": 768,
+    "n_heads": 12,
+    "n_layers": 12,
+    "drop_rate": 0.1,
+    "qkv_bias": False
+}
+
+
+Explanation:
+vocab_size → total tokens (GPT-2 uses 50257)
+context_length → max sequence length
+emb_dim → embedding size
+n_heads → number of attention heads
+n_layers → transformer layers
+drop_rate → dropout for regularization
+qkv_bias → bias in attention layers
+
+
+## 🔀 Train-Validation Split
+
+To train and evaluate the model properly, we split the dataset into training and validation parts.
+
+```python
+train_ratio = 0.90
+split_idx = int(len(text) * train_ratio)
+
+train_data = text[:split_idx]
+val_data = text[split_idx:] 

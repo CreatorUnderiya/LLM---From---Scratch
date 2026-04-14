@@ -1,7 +1,14 @@
 # Now we divide the dataset into a training and  a validation set and use the dataloaders from chapter
 import torch
+import pandas as pd 
 import tiktoken 
 from torch.utils.data import DataLoader, Dataset
+
+with open("cleaned.txt", "r", encoding="utf-8") as f:
+    text = f.read()
+
+
+
 
 class GPTDataset(Dataset):
   def __init__(self,text,tokenizer,max_length, stride):
